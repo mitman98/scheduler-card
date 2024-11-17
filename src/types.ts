@@ -193,6 +193,7 @@ export interface ImportedEntry {
 /* config */
 
 export interface CardConfig extends LovelaceCardConfig {
+  scheduler_domain: string;
   discover_existing: boolean;
   standard_configuration: boolean;
   title: boolean | string;
