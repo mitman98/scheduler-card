@@ -42,7 +42,7 @@ export class SchedulerCardEditor extends LitElement implements LovelaceCardEdito
 
   async firstUpdated() {
     await loadHaForm();
-    this.scheduleEntities = (await fetchSchedules(this.hass!)).map(e => e.entity_id);
+    this.scheduleEntities = (await fetchSchedules(this.hass!, this._config)).map(e => e.entity_id);
     const tagOptions = (await fetchTags(this.hass!)).map(e => e.name);
     tagOptions.sort(sortAlphabetically);
     this.tagOptions = tagOptions;
