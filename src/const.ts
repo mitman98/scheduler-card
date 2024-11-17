@@ -23,6 +23,7 @@ export enum ETabOptions {
 
 export const DefaultCardConfig: CardConfig = {
   type: 'scheduler-card',
+  scheduler_domain: 'scheduler',
   discover_existing: true,
   standard_configuration: true,
   include: [],
